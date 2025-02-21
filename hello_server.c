@@ -4,6 +4,7 @@
 #include<unistd.h>
 #include<arpa/inet.h>
 #include<sys/socket.h>
+#include<winsock2.h>
 void error_handling(char *message);
 
 int main(int argc, char* argv[])
