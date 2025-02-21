@@ -4,7 +4,7 @@
 #include<unistd.h>
 #include<arpa/inet.h>
 #include<sys/socket.h>
-void error_handling(char *message);
+void error_handling(char* message);
 
 int main(int argc, char* argv[])
 {
@@ -44,7 +44,7 @@ int main(int argc, char* argv[])
 		error_handling("accept() error");
 	//稍后要将介绍的 write 函数用于传输数据，若程序经过 accept 这一行执行到本行，则说明已经有了连接请求
 	write(clnt_sock, message, sizeof(message));
-	close(clnt_sock);
+	close(clnt_spck);
 	close(serv_sock);
 	return 0;
 }
